@@ -20,7 +20,7 @@ Welcome to my repository dedicated to documenting my learning journey during the
 
 ## 📚 Course and Module List
 
-This table is designed to track all the courses and modules I will be studying. A **check mark ($\checkmark$ or ✅)** will be placed in the "Completion Status" column upon successful completion of the course.
+This table is designed to track all the courses and modules I will be studying.
 
 | Course/Module                   | Completion Status |
 | :------------------------------ | :---------------: |
