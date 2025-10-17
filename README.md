@@ -24,7 +24,7 @@ This table is designed to track all the courses and modules I will be studying. 
 
 | Course/Module                   | Completion Status |
 | :------------------------------ | :---------------: |
-| **Introduction To Programming** |     $\square$     |
+| **Introduction To Programming** |    ⏳ Progress    |
 
 ---
 
