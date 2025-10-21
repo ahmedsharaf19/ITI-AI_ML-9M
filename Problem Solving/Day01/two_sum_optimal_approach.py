@@ -1,4 +1,4 @@
-    // Optimal Approach using Python
+   # Optimal Approach using Python
     class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashingMap = {}
