@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1761119853 source:h:\iti-ai_ml-9m\1. introduction to programming using c++\lab04\struct_emp\main.cpp
+	<iostream>
+	<string.h>
+
