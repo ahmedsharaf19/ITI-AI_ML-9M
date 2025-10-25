@@ -12,13 +12,15 @@ int main()
     int* pointerArray = arrayNumbers;
     for(int i = 0; i < numElement; i++){
         cout << "Enter Element Number (" << i + 1 << ") : ";
-        cin >> *(pointerArray+i);
+        cin >> arrayNumbers[i];
     }
 
     cout << endl;
 
+    cout << "Pointer Add\t:Array Add\t:Pointer Element\t:Array Element  \n";
     for (int i = 0; i < numElement; i++)
-        cout << *(pointerArray+i) << "\t";
+        cout << pointerArray+i << "\t:" << &arrayNumbers[i] << "\t:" << *(pointerArray+i) << "\t\t\t:" << arrayNumbers[i] << endl;
+
     cout<<endl;
 
     cout << endl;

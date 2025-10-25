@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1761164132 source:h:\iti-ai_ml-9m\1. introduction to programming using c++\lab05\full_menu_dynamic\main.cpp
+	<iostream>
+	<conio.h>
+	<windows.h>
+

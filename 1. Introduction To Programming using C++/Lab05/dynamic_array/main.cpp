@@ -20,7 +20,7 @@ int main()
 
     // Print Array
     for (int i = 0; i < numElement; i++)
-        cout << pointerArray[i] << "\t";
+        cout << *(pointerArray+i) << "\t";
     cout<<endl;
 
 

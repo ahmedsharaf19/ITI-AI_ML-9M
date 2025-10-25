@@ -13,9 +13,13 @@ int main()
     cin >> numberTwo;
 
     cout << "\n\t\t\t------- Before Swap -------\n";
+    cout << "\t\t\tnumberOneAdd = " << &numberOne << endl;
+    cout << "\t\t\tnumberTwoAdd = " << &numberTwo << endl;
     cout << "\t\t\tnumberOne = " << numberOne << " : numberTwo = " << numberTwo << endl;
     swap(&numberOne, &numberTwo);
-    cout << "\n\t\t\t------- After Swap -------\n";
+    cout << "\n\n\t\t\t------- After Swap -------\n";
+    cout << "\t\t\tnumberOneAdd = " << &numberOne << endl;
+    cout << "\t\t\tnumberTwoAdd = " << &numberTwo << endl;
     cout << "\t\t\tnumberOne = " << numberOne << " : numberTwo = " << numberTwo << endl;
 
     return 0;
