@@ -76,11 +76,11 @@ int main()
     cin >> salary;
     emp.setSalary(salary);
 
-    cout << "Printed Data By Memebr Function : \n";
+    cout << "\n\t\tPrinted Data By Memebr Function : \n";
     emp.printEmployee();
 
     cout << "--------------------------------------------------------------------------------------------------------\n";
-    cout << "Printed Data By Stand Alone Function : \n";
+    cout << "\n\t\tPrinted Data By Stand Alone Function : \n";
     printEmployee(emp);
     return 0;
 }
