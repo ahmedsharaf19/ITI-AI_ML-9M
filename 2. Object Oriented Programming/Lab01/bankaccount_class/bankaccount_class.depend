@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1761326339 source:h:\iti-ai_ml-9m\2. object oriented programming\lab01\bankaccount_class\main.cpp
+	<iostream>
+	<string.h>
+	<conio.h>
+
