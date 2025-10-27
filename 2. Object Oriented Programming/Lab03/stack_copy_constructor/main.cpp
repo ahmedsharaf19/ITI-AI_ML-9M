@@ -16,6 +16,20 @@ public:
         tos = -1;
         size = _size;
         stackContent = new int[size];
+        cout << "Default Constructor Called" << endl;
+    }
+
+    // Copy Constructor
+    Stack(Stack& s)
+    {
+        tos = s.tos;
+        size = s.size;
+        stackContent = new int[size];
+        for (int i = 0; i < size; i++)
+        {
+            stackContent[i] = s.stackContent[i];
+        }
+        cout << "Copy Constructor Called" << endl;
     }
 
     bool push(int value)
@@ -42,7 +56,7 @@ public:
         return true;
     }
 
-    friend void clear(Stack& s);
+    friend void clear(Stack s);
 
     void print()
     {
@@ -63,14 +77,15 @@ public:
 
     ~Stack()
     {
+        cout << "Destructor Called" << endl;
         delete[] stackContent;
     }
 };
 
-void clear(Stack& s)
+void clear(Stack s)
 {
     s.tos = -1;
-    cout << "Stack Cleared" << endl;
+    cout << "Stack Cleared " << endl;
 }
 
 int main()
@@ -89,12 +104,10 @@ int main()
 
     s.print();
 
+    cout << "Clear Stack" << endl;
     clear(s);
+
     s.print();
 
     return 0;
-}
-
-
-void myfun(int a, ...){
 }

@@ -8,12 +8,15 @@ class Employee{
 private :
     int id;
     char name[20];
+
     int age;
     float salary;
+
 public:
 
     // ########################### Constructors ###########################
     Employee(int _id, char* _name){
+
         setId(_id);
         setName(_name);
     }
