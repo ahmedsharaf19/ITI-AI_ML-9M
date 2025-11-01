@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1761898437 source:h:\iti-ai_ml-9m\2. object oriented programming\lab05\stack\main.cpp
+	<iostream>
+	<string>
+	<cctype>
+	<cmath>
+
