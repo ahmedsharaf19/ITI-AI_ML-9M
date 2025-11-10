@@ -94,7 +94,3 @@ int main()
 
     return 0;
 }
-
-
-void myfun(int a, ...){
-}
