@@ -1,0 +1,157 @@
+CREATE DATABASE os44_db;
+
+USE os44_db;
+
+/*Table structure for table departments */
+
+DROP TABLE IF EXISTS departments;
+
+CREATE TABLE departments (
+  Dname varchar(50),
+  Dnum int(10) NOT NULL DEFAULT 0,
+  MGRSSN int(10),
+  MGRStart Date,
+  PRIMARY KEY (Dnum),
+  UNIQUE KEY EmployeeDepartments (MGRSSN),
+  UNIQUE KEY MGRSSN (MGRSSN),
+  KEY Dnum (Dnum)
+);
+
+/*Table structure for table employee */
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+  Fname varchar(50),
+  Lname varchar(50),
+  SSN int(10) NOT NULL Primary Key,
+  Bdate date,
+  Address varchar(50),
+  gender varchar(50),
+  Salary int(10),
+  Superssn int(10),
+  Dno int(10),
+  CONSTRAINT emp_dept_fk FOREIGN KEY (Dno) REFERENCES departments (Dnum),
+  CONSTRAINT emp_supssn_fk FOREIGN KEY (Superssn) REFERENCES employee (SSN)
+);
+
+
+/************** ALter Table Dept *******************/
+Alter table departments
+Add CONSTRAINT dept_mgrssn_fk FOREIGN KEY (MGRSSN) REFERENCES employee (SSN);
+/********************************************/
+
+/*********** Dept data ***********/
+/*Data for the table departments */
+
+insert  into departments values ('DP1',10,NULL,'2005-01-01'),('DP2',20,NULL,'2006-01-03'),('DP3',30,NULL,'2006-01-06');
+/********************************************/
+
+
+/*Data for the table employee */
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values  ('Amr','Omran',321654,NULL,'44 Hilopolis.Cairo','M',2500,NULL,NULL);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Kamel','Mohamed',223344,'1970-10-15','38 Mohy el dien abo el Ezz  St.Cairo','M',1800,321654,10);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Ahmed','Ali',112233,NULL,'15 Ali fahmy St.Giza','M',1300,223344,10),
+('Hanaa','Sobhy',123456,'1973-03-18','38 Abdel Khalik Tharwat St. Downtown.Cairo','F',800,223344,10);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Noha','Mohamed',968574,'1975-01-02','55 Orabi St. El Mohandiseen .Cairo','F',1600,321654,20);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Maged','Raoof',521634,'1980-06-04','18 Kholosi st.Shobra.Cairo','M',1000,968574,30);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Edward','Hanna',512463,'1972-08-19','18 Abaas El 3akaad St. Nasr City.Cairo','M',1500,321654,30);
+
+insert  into employee(Fname,Lname,SSN,Bdate,Address,gender,Salary,Superssn,Dno) 
+values ('Mariam','Adel',669955,'1982-12-06','269 El-Haram st. Giza','F',750,512463,20);
+;
+/***********************/
+
+update departments set mgrssn = 223344 where dnum = 10;
+
+update departments set mgrssn = 968574 where dnum = 20;
+
+update departments set mgrssn = 512463 where dnum = 30;
+
+/**************************
+
+
+/*Table structure for table project */
+
+DROP TABLE IF EXISTS project;
+
+CREATE TABLE project (
+  Pname varchar(50),
+  Pnumber int(10) Primary key,
+  Plocation varchar(50),
+  City varchar(50),
+  Dnum int(10)
+);
+
+/*Data for the table project */
+
+insert  into project(Pname,Pnumber,Plocation,City,Dnum) 
+values ('AL Solimaniah',100,'Cairo_Alex Road','Alex',10),
+('Al Rabwah',200,'6th of October City','Giza',10),
+('Al Rawdah',300,'Zaied City','Giza',10),
+('Al Rowad',400,'Cairo_Faiyom Road','Giza',20),
+('Al Rehab',500,'Nasr City','Cairo',30),
+('Pitcho american',600,'Maady','Cairo',30),
+('Ebad El Rahman',700,'Ring Road','Cairo',20);
+
+/*Table structure for table works_for */
+
+DROP TABLE IF EXISTS works_for;
+
+CREATE TABLE works_for (
+  ESSn int(10) NOT NULL DEFAULT 0,
+  Pno int(10) NOT NULL DEFAULT 0,
+  Hours int(10),
+  PRIMARY KEY (ESSn,Pno),
+  CONSTRAINT emp_proj_essn_fk FOREIGN KEY (ESSn) REFERENCES employee (SSN),
+  CONSTRAINT emp_proj_pno_fk FOREIGN KEY (Pno) REFERENCES project (Pnumber)
+);
+
+/*Data for the table works_for */
+
+insert  into works_for(ESSn,Pno,Hours) values 
+(112233,100,40),(223344,100,10),(223344,200,10),
+(223344,300,10),(223344,500,10),(512463,500,10),
+(512463,600,25),(521634,300,6),(521634,400,4),
+(521634,500,10),(521634,600,20),(669955,300,10),
+(669955,400,20),(669955,700,7),(968574,300,10),
+(968574,400,15),(968574,700,15);
+
+
+/*Table structure for table dependent */
+
+CREATE TABLE dependent(
+  ESSN INT(11) NOT NULL,
+  dependent_name VARCHAR(200) NOT NULL,
+  sex VARCHAR(1),
+  bdate DATE,
+  PRIMARY KEY (ESSN, dependent_name),
+  FOREIGN KEY(essn) REFERENCES employee(ssn)
+);
+
+
+/*Data for the table dependent */
+
+INSERT INTO dependent
+VALUES
+(112233, 'Hala Saeid Ali', 'F', '1970-10-18'),
+(223344, 'Ahmed Kamel Shawky', 'M', '1998-3-27'),
+(223344, 'Mona Adel Mohamed', 'F', '1975-4-25'),
+(321654, 'Ramy Amr Omran', 'M', '1990-1-26'),
+(321654, 'Omar Amr Omran', 'M', '1993-3-30'),
+(321654, 'Sanaa Gawish', 'F', '1973-5-16'),
+(512463, 'Sara Edward', 'F', '2001-9-15'),
+(512463, 'Nora Ghaly', 'F', '1976-6-22');
+
