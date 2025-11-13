@@ -28,6 +28,7 @@ This table is designed to track all the courses and modules I will be studying.
 | **Object Oriented Programming** |   ✅ Completed    |
 | **Linux Operating System**      |   ✅ Completed    |
 | **Database Fundamentals**       |    ⏳ Progress    |
+| **Python**                      |    ⏳ Progress    |
 
 ---
 
