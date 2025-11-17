@@ -1,0 +1,74 @@
+[
+    {
+        "email": "userw@example.com",
+        "title": "Eco Bottle Initiative",
+        "details": "Reusable bottle distribution to reduce plastic waste.",
+        "target": 50000,
+        "start_date": "2025-11-01",
+        "end_date": "2026-02-28"
+    },
+    {
+        "email": "userw@example.com",
+        "title": "Eco Bottle Initiative",
+        "details": "Reusable bottle distribution to reduce plastic waste.",
+        "target": 50000,
+        "start_date": "2025-11-01",
+        "end_date": "2026-02-28"
+    },
+    {
+        "email": "userw@example.com",
+        "title": "Eco Bottle Initiative",
+        "details": "Reusable bottle distribution to reduce plastic waste.",
+        "target": 50000,
+        "start_date": "2025-11-01",
+        "end_date": "2026-02-28"
+    },
+    {
+        "email": "userw@example.com",
+        "title": "Eco Bottle Initiative",
+        "details": "Reusable bottle distribution to reduce plastic waste.",
+        "target": 50000,
+        "start_date": "2025-11-01",
+        "end_date": "2026-02-28"
+    },
+    {
+        "email": "ahmed@gmail.com",
+        "title": "DSA",
+        "details": "DSA Project",
+        "target": "15000",
+        "start_date": "2025-12-1",
+        "end_date": "2026-1-30"
+    },
+    {
+        "email": "ahmed@gmail.com",
+        "title": "Alog",
+        "details": "algorithm",
+        "target": "20000",
+        "start_date": "2025-11-30",
+        "end_date": "2025-12-1"
+    },
+    {
+        "email": "ahmed@gmail.com",
+        "title": "ai",
+        "details": "ai",
+        "target": 15000.0,
+        "start_date": "2025-4-12",
+        "end_date": "2025-4-15"
+    },
+    {
+        "email": "ali@gmail.com",
+        "title": "54545",
+        "details": "64646",
+        "target": 150000.0,
+        "start_date": "2025-11-3",
+        "end_date": "2025-11-2"
+    },
+    {
+        "email": "ali@gmail.com",
+        "title": "ai",
+        "details": "ai",
+        "target": 4500.0,
+        "start_date": "2025-12-1",
+        "end_date": "2025-12-30"
+    }
+]

@@ -1,0 +1,48 @@
+class and function -> only have local var
+
+loop statement -> any variable declare it become global var
+
+
+to access global var using keyward (global namevar) -> tell interpreter don't create new local var just use global var
+
+to access local var in function inside function 
+nonlocal varname -> tell interpreter don't make new var and access parents var 
+
+
+note -> we can define functions inside functions
+
+
+if we import module or specific thing from module it run the script so use __name__ == "__main__"
+
+
+__init__.py -> content called when import any module from this package
+act as __init__.py hold content all module in same package
+when we define __init__.py inside the package => python treats package as a module with th e name of the package
+
+i can use this file as index, entry point for this package
+
+ai 
+	- __init__.py
+	- string.py
+
+main.py
+from ai import sayHello # valid
+from ai impoty len    #valid
+
+right way :
+from ai.string mport sayHello # more right way
+and can make this alias in __init__.py
+
+from .string import string
+
+
+
+use __init__.py
+	1. if we call specific function repeatly define it in __iniy__.pu
+	2. or to make a package
+
+
+
+finally execute before return in function and break so finally execute always
+
+we write try, except with mode write for permission denied
