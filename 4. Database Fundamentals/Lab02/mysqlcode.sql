@@ -176,4 +176,3 @@ where SSN = 223344;
 update employee
 set Salary = Salary + (Salary * 0.2)
 where SSN = 111111;
-

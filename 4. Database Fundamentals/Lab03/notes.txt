@@ -1,0 +1,79 @@
+left, right :
+	هنعمل inner 
+	بعد كدا ناخد ال Recored اللى فاضي
+	سواء من ال left او right
+
+ال full بقي على حسب هجيب 
+ال inner واجيب ال recored اللى ف 
+ال left, right
+
+
+join condition start with FK = PK
+
+we think in join
+	1. if we need get data from multitable
+	2. we may be join between many table to get data from two table only because we need to relation between two table se we may join more than table
+
+
+in self join we must create alias name
+
+اللى فات دا اسمه 
+equi join يعني pk = fk او العكس بقي 
+
+
+ف نوع join تانى اسمه non equi join 
+يعني هيبقي 
+>, <, between -- and ---
+يعني جدولين مفيش بينهم pk = fk هيبقي قيم يعني
+اللى هو ال sub query
+
+cascade -> امسح واعدل ابناءه
+Restricted -> دي ال default
+nullify(set null) -> مش هيمسح اللى بيشاور عليهم هو هيخليهم يكونو ب null يعني لازم ال fk بيكون بيسمح ب null
+
+
+subquery بتتحط مع اي condition 
+like : where, having, update, delete
+
+ومع ال From وبتبقي هنا inline view
+
+ال view كانها subquery كل مره بيروح ينفذها
+وبتبقي virtual table
+
+
+عادي اعدل ف ال table من خلال الجدول بس 
+لو تنفع بال logic
+
+with check option 
+بتمنع أي update على ال feild بتاع ال condition
+يعني بتمنع اي تعديل يخليني بعد كدا اقلل او ازود عدد ال 
+recored اللى كنت شايفها
+
+view -> complex view, simple view
+على حسب ال select 
+
+لو ال Select من one table, no grouping, no function
+دا simple view 
+
+لو في 
+join, group, calaculation 
+دا complex 
+
+
+لو ال view بتاعي simple ممكن اعمل dml 
+لو complex مش هقدر اعمل dml
+
+
+Prefer Create Index when : 
+	1. Used Frequently in where
+	2. Less DML
+	3. Table (Big)
+	4. 3 - 4 % تكرار نعمل index
+	5. More Null (نعمل index)
+
+
+
+جزء ال index بيبقي عمله وانشاه مشترك بين ال
+developer وال DBA وممكن نعمله ونلغيه عادي
+
+ممكن تسرع الدنيا جدا او تبطئ الدنيا جدا جدا
