@@ -1,0 +1,125 @@
+to install external package 
+using external packges manager like : pip / uv
+
+you can download and install package in os(global) / inside folder
+
+
+installed global -> install once and use any where 
+you have only on version at system
+
+
+install package in folder -> 
+	. create virtualenviroment
+	. can have different versions from packages in the same machine 
+	
+	Dis:
+		. When need same package in onther program you need to install package in this environment again
+
+
+
+any project you create: requirements.txt (dependences)
+contain name and version of package you needed
+
+
+
+to list packages installed -> pip freeze (command)
+after installation pakage use this command to create requirement 
+
+pip freeze >> requirements.txt
+
+------------------------------------------------------
+prefer to create virtual environment for each project
+
+what is virtual environment python ? 
+	we have library (venv) to create virtual environment
+	use to install independent package in their site
+not move and copy venv but you can create requirements 
+
+how to create venv:
+first pip install virtualenv
+virtualenv .(name)   -> ex: virtualenv .ai (ignored by git)
+or virtualenv name   -> ex: virtualenv ai (not hidden)
+create virtualenv called ai and hidden
+
+
+
+to active (run script)
+source .(name)/bin/activate -> source is command
+
+in vscode you can create by gui -> ctr + shift + p then write python create enviroment
+------------------------------------------------------
+if package didn't install search on binary file direct and download it 
+################################################################
+python -> هي مش بتعمل oop فعليا 
+هي بتعملها كانها موجوده 
+في مبادئ كتيره مش مطبقه فيها فعلا 
+
+1.  different object from the same class with different structure to flexibility wise 
+ex :
+class student:
+	pass
+
+s = student()
+s.age = 14  # accepted we can add properties to object in run time
+s.__dict__ # all properties in your object
+
+
+how the object is created > 
+once write
+class student:
+	pass
+
+# any class in python implicitly inherits from object class
+# __init__ ---> constructor function called once created object and reserve address in memory for properties  
+# self -> represent caller object
+
+we can customize object creation in constructor 
+
+class name:
+	# class attributes
+
+	no_of_object = 0
+	def __init__(self):
+		# instance attribute
+		self.no_of_object += 1 # هيعتبر انها تخص ال object
+	# instance method because operation depend on object
+	def displayStudent(self):
+		pass
+	
+	def display(): # class method
+		pass 
+
+
+class name:
+	# class attributes
+	no_of_object = 0  # shared property between all instance in the class
+	def __init__(self):
+		# instance attribute
+		
+		# علشان اعرفه ان دي تخص الكلاس
+		name.no_of_object += 1
+	# instance method because operation depend on object
+	def displayStudent(self):
+		pass
+	
+	@classmethod
+	def display(): # class method
+		pass 
+	
+	@classmethod
+	def display(self): 
+	# class method self-> refer to class 
+	# first param in classmethod represent class and usually named cls
+ 		pass 
+
+	
+# @staticmethod -> write in class, related to  class but can't access attributes directly (can access by name class), like as helper function and don't depend on object or class use to create helper function
+
+use class method to apply functionality related to the class and access the attributes
+
+decorator -> modify default behavior of function
+decorator is a design pattern, and we can create custom decorator
+
+self.__class__.classAttributte # can access the class attribute by self
+
+
