@@ -1,0 +1,147 @@
+redundancy تكرار يمكن الاستغناء عنه 
+ليه في مشكله ف التكرار اللى ممكن استغني عنه ؟
+insert, update, delete 
+ممكن لما امسح recored هو الوحيد اللى فيه معلومات عن 
+حاجه معينه هيتمسح المعلومات دي عنه هو كمان 
+
+علشان ادخل بيانات معينه لازم يكون عندي recored معين عنده المعلومات دي علشان اخزنه
+
+لو حبيت اعمل edit هكرر التعديل دا ف كل ال recored الى عندهم المعلومه دي 
+
+
+فانا محتاجين نتخلص ال redundancy
+
+how to detect redundancy ?
+
+Functional Dependency ? 
+لو عندي variable a بمعلوميه معلومه واخده من b اقدر اعرف ال a
+
+من الاخر لما استخدم معلومه واحده بس اقدر احدد recored بعينه
+
+ex: fnam  -> x   sid
+sid is not functionally depend of fname
+يعني دا معناه ان لو عرفت الاسم مش هقدر احدد ال id 
+
+لكن بمعلوميه ال Sid اقدر اعرف كل معلومات ال student دا 
+
+sid  -> fname, lname, sal, add, tel
+يعني اقدر اعرف كل دا من ال id 
+Are functionally depend on sid
+
+special case from functionally dependent:
+sid : sname : cid : grade 
+
+sid -> sname (sname is functionally depend on sid (part of composite pk))
+sid, cid -> grade (grade is functionally depend on sid, cid (composite pk))
+
+sid, cid -> composite pk
+sid -> part of composite pk
+
+دا التعريف التاني لل normalization 
+ال partial key dependency 
+
+partial key dependency  ? 
+ان عندي field من الجدول بيعتمد على حته من ال pk مش ال pk كله
+
+transitive dependency ?
+لو field مش pk بيعتمدو على field تاني هو كمان pk يبقي دا كدا transitive dependent
+non key depend on another non key 
+
+Repeating group ?
+لو كذا cell فيها اكتر من قيمه 
+يعني هي multivalued
+بنشوف ال field اللى فيها multivalued هما 
+ليهم علاقه ببعض يعني بيوصفو بعض ولا لا
+
+
+لو لاقيت related multivalued attribute دا مسمي repating group 
+
+بنعلم لكل related multivalued جدول مع ال pk الاساسي للجدول اللى جاى منه
+
+sid, sname, tel, add, cid, cname, desc, grade
+
+sid, tel   -> StdTel
+sid,cid, cname, description, grade    -> pk(sid, cid)
+sid, sname, add
+------------------------------------------
+Normalization 
+process شويه خطوات 
+هنعملها لهدف واحد اني reduce redundancy 
+3) steps 
+	1. 1NF
+	2. 2NF
+	3. 3NF
+
+i/p -> unnormalized data (data contain redundancy)
+apply normalization
+o/p -> relational schema (table with fk and pk)
+
+
+steps :
+1. 1NF
+تخلص من ال multivalued 
+تخلص من ال repeation group 
+
+2. 2NF
+اى جدول يجيلك اتاكد انه مفيهوش partial key dependency 
+مفيش non key بيعتمد على حته من composite pk
+لو معنديش اصلا composite pk يبقي المرحله دي خلصانه
+
+3. 3NF
+نمسك كل جدول ونتاكد ان مفيهوش transitive dependency 
+يعني اتاكد ان كل جدول مفيهوش non key بيعتمد على non key
+
+
+
+tips:
+واحنا بنشتغل ف 
+1NF هنشتغل بس على ال MULTIVALUED وال REPEATING GROUP 
+فقط
+
+2NF ببص على علاقه ال COMPOSITE PK مع باقي ال FIELD واشوف حد معتمد على جزء ولا لا مببصش على علاقات ال NON KEY خالص 
+
+
+3.NF 
+ببص على ال NON KEY FIELD بس 
+
+----------------------------------------------------
+DCL (for privilege & Administarator)
+
+create user (user_name) identifiy by (pass)
+
+grant all 
+on *.*
+to (username)
+دا هيدي كل الصلاحيات لل user دا
+
+all -> معناها كل الصلاحيات (insert, update, delete)
+on -> هديها لمين 
+*.* على كل الداتا بيز على كل الاوبجيكت اللى ف الداتا بيز دي
+to -> ل user معين
+
+ex: 
+grant all 
+on ITI.*   -> على الداتا بيز دي كل الاوبجيكت اللى فيها
+to AI_man
+
+
+grant all
+on iti.emp  -> داتابيز معينه جدول معين فقط
+to ----
+
+grant select -> من حقه يشوف فقط
+on iti.emp
+to ----
+
+لو عملت user وعايز اشيله بشيله ب drop 
+لو عملت user اعدله password ب alter
+
+اشيل permission ب revoke
+
+
+grant all
+on 
+to
+with grant option
+
+ان اديتك كمان صلاحيات انك تعمل grant وتدي صلاحيات لحد كمان
