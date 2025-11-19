@@ -1,0 +1,93 @@
+to call parent conestructor you mist call it explicity
+using super().__init__()
+if we don't have conestructor call first parent automatically (ordered)
+once calling parent constrictor don't calling another parent conestructor
+to apply override requires inheritance
+
+types inheritance
+    single -> الابن بيورث من اب واحد
+    multilayer -> A inherit from b and b inherit from call
+    multiple inheritance -> may occure diamond problem
+        - child inherit from parent 
+        - class inherit from childs so 
+        - مببقاش عارف الخاصيه دي انا وارثها من انهي
+
+
+self.variableName = value
+in any function in instance method will create instance attribute and can access
+anywhere and still existed after function returend 
+if variableName is existed call it
+
+--------------------------------------
+if inherit from abstract class must implement each abstractmethod
+if not implemented the child class become abstract class
+to create abstract
+from ABC import abc
+class A(abc):
+    @abstractmethod
+    def hi():
+        pass
+
+a = A() # valid but please don't do this
+
+
+class ABC inherit from metaclass ABCMeta
+-----------------------------------------
+tips
+
+magic methods
+
+
+__repr__  (explain to developer structure your object)
+# development mode
+# return string
+
+when print object(s) interpreter 
+get __str__ if not found get __repr__ if two not found get default __str__
+
+__len__ => to get length like number of attribute
+len(self.__dict__)
+
+__del__ -> destructor call when dell object or using del s
+
+slots -> class attribute used to explicitly declare the data members (attributes) that instances of a class will possess
+__slots__ = ('', '') -> Can't represent object as dictinary
+    __dict__
+
+
+__sizeof__
+
+
+anonymous function
+lambda -> when need function used in this location not used another context
+
+myfun = lambda parameter:return 
+myfun = lambda num:num+10
+
+myfun(4)  -> return 14
+
+higher order function 
+    -> can accept function / return function
+
+def askForFullName():
+    firstname = input('Please Enter First Name : )
+    lastname = input('Please enter last name : )
+    fullname = f'{firstname} {lastname}"
+    return lambda message: f'{message} {fullname}'
+
+res = askForFullName()
+print(res('ali))
+
+---------------------------------------
+map -> apply function for collection
+l = [3, 55, 45, 2, 324]
+
+newl = map(lambda item: item*10, l) -> apply lambda function to lambda l
+return map object
+
+casting to list 
+list(newl)
+
+
+filter -> filter elemenet in collection based in criteria 
+
