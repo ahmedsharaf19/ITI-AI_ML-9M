@@ -1,0 +1,45 @@
+reshape -> return view from array 
+r = arr.reshape()
+r1 = arr.reshape()
+
+two array have same address in memory if one change element the second array show that effect
+
+
+raver -> convert to 1d array (return view)
+
+
+flatten -> copy array then convert
+
+
+resize -> reshape array but if has empty cell it become zero and effect inplace of array (overwrite original array)
+
+
+squeeze -> بتشيل كل الوحايد اللى ف اي dim 
+(1, 1, 3) -> (3, )
+(1, 3, 1) -> (3, )
+(1, 2, 1, 3) -> (2, 3)
+
+
+np.arange(start, end, step) (end excluded)
+np.linspace(start, end, #element) (end included)
+
+
+x (7, )
+y (5, )
+
+meshgrid(x, y)
+
+repeat each array by dim another 
+x, y = meshgrid(x, y)
+
+x -> (5, 7)
+y -> (7, 5)
+التكرار بيبقي بمعلومات العنصر نفسه
+
+بيكرر كل واحده بعدد مرات التانيه
+
+indexing => 'ij' or 'xy' default
+الاول كانها اعمده
+والتانيه كانها صفوف
+
+
