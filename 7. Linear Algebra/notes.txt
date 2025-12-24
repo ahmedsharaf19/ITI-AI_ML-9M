@@ -1,0 +1,12 @@
+free variable   : A variable without a pivot
+Basic Variable  : A variable with a pivot
+dim(V) 		: Number of basis vectors of subspace V
+Nullity		: Number of free variables (= dimension of null space)
+Rank		: Number of pivots
+
+
+
+Null Space	: dim = #columns - #pivots
+Column Space	: dim = #pivots
+Row Space	: dim = #pivtos
+Solution space of Ax=0 : nullspace
