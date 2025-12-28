@@ -22,16 +22,18 @@ Welcome to my repository dedicated to documenting my learning journey during the
 
 This table is designed to track all the courses and modules I will be studying.
 
-| Course/Module                   | Completion Status |
-| :------------------------------ | :---------------: |
-| **Introduction To Programming** |   ✅ Completed    |
-| **Object Oriented Programming** |   ✅ Completed    |
-| **Linux Operating System**      |   ✅ Completed    |
-| **Database Fundamentals**       |   ✅ Completed    |
-| **Python**                      |   ✅ Completed    |
-| **Python Libraries**            |   ✅ Completed    |
-| **Linear Algebra**              |   ✅ Completed    |
-| **Probability**                 |    ⏳ Progress    |
+| Course/Module                        | Completion Status |
+| :----------------------------------- | :---------------: |
+| **Introduction To Programming**      |   ✅ Completed    |
+| **Object Oriented Programming**      |   ✅ Completed    |
+| **Linux Operating System**           |   ✅ Completed    |
+| **Database Fundamentals**            |   ✅ Completed    |
+| **Python**                           |   ✅ Completed    |
+| **Python Libraries**                 |   ✅ Completed    |
+| **Linear Algebra**                   |   ✅ Completed    |
+| **Probability**                      |   ✅ Completed    |
+| **Data Exploration and Preparation** |    ⏳ Progress    |
+| **Numerical Optimization**           |    ⏳ Progress    |
 
 ---
 
