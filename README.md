@@ -32,8 +32,9 @@ This table is designed to track all the courses and modules I will be studying.
 | **Python Libraries**                 |   ✅ Completed    |
 | **Linear Algebra**                   |   ✅ Completed    |
 | **Probability**                      |   ✅ Completed    |
+| **Numerical Optimization**           |   ✅ Completed    |
 | **Data Exploration and Preparation** |    ⏳ Progress    |
-| **Numerical Optimization**           |    ⏳ Progress    |
+| **Machine Learning 1 - Supervised Learning** |    ⏳ Progress    |
 
 ---
 
