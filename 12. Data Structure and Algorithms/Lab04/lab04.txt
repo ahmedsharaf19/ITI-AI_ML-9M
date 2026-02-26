@@ -1,0 +1,11 @@
+Merge Sort
+
+Max–Min (Divide and Conquer)
+
+Strassen Matrix Multiplication
+
+Karatsuba Multiplication
+
+Knapsack Problem
+
+Matrix Chain Multiplication

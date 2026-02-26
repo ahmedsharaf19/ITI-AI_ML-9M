@@ -1,0 +1,71 @@
+Task 1 — Doubly Linked List of Students
+
+1. Create a Student class with:
+Attributes:
+• id: int
+• name: str
+• grades: list[float] (exactly 5 grades)
+
+2. Implement Getters and Setters in Student class:
+Getters
+• get_id()
+• get_name()
+• get_grades()
+• get_average() → returns the average of the 5 grades
+
+Setters
+• set_id(new_id)
+• set_name(new_name)
+• set_grades(new_grades)
+• Must validate that exactly 5 numeric grades are provided.
+
+⸻
+
+3. Create a Node class:
+Each node contains:
+• data: Student
+• prev
+• next
+
+⸻
+
+4. Create a DoublyLinkedList class to store students.
+Implement the following methods:
+• append(student) → add student at the end
+• prepend(student) → add student at the beginning
+• delete_by_id(student_id) → remove student by id
+• search_by_name(name) → return matching student(s)
+• search_by_id(student_id) → return the student
+• count_nodes() → return number of nodes
+• display_forward() → print from head to tail
+• display_backward() → print from tail to head
+
+⸻
+
+Task 2 — Stack Using Linked List
+
+Implement a Stack class using a linked list.
+
+Operations:
+• push(item)
+• pop()
+• peek()
+• is_empty()
+• size()
+Hint use students objects with stack operations.
+⸻
+
+Task 3 — Queue Using Array
+
+Implement a Queue class using an array (Python list).
+
+Operations:
+• enqueue(item)
+• dequeue()
+• front()
+• is_empty()
+• is_full() (if fixed size)
+• size()
+Hint use students objects with queue operations
+
+

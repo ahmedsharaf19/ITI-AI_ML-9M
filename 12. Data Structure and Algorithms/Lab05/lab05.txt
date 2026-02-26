@@ -1,0 +1,47 @@
+Algorithms lab 
+Task 1 — Implement a Binary Tree
+    Create a Node class with:
+        value
+        left
+        right
+    Create a BinaryTree class with:
+        root
+        (optional) insert() as BST insertion, or manual linking for testing
+
+Task 2 — Traverse a Binary Tree
+    Implement these traversal functions (recursive + optional iterative):
+        Inorder (Left, Root, Right)
+        Preorder (Root, Left, Right)
+        Postorder (Left, Right, Root)
+        Each function should return a list of visited values.
+
+Task 3 — Build (Draw) a Tree from Traversals
+    Implement functions to reconstruct the binary tree:
+        A) From Inorder + Preorder
+            Rules:
+                preorder[0] is the root
+                Find root position in inorder → split inorder into left/right
+                Split preorder accordingly and recurse
+        B) From Inorder + Postorder
+            Rules:
+                postorder[-1] is the root
+                Find root position in inorder → split inorder into left/right
+                Split postorder accordingly and recurse 
+
+        ✅ After building, print the tree in a readable form (sideways or level-order) to “draw” it.
+        Note: Preorder + Postorder alone is NOT enough to uniquely build a general binary tree (unless it’s a full tree with extra constraints).
+
+Task 4 — Implement a Graph (Adjacency List)
+    Build a Graph class using dict/list:
+        add_vertex(v)
+        add_edge(u, v) (directed or undirected—choose and be consistent)
+
+Task 5 — Graph Traversals
+    A) Depth First Search (DFS)
+        Implement:
+            Recursive DFS
+            Iterative DFS using a stack
+    B) Breadth First Search (BFS)
+        Implement BFS using a queue
+        Return visitation order
+ 
