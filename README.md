@@ -33,8 +33,16 @@ This table is designed to track all the courses and modules I will be studying.
 | **Linear Algebra**                   |   ✅ Completed    |
 | **Probability**                      |   ✅ Completed    |
 | **Numerical Optimization**           |   ✅ Completed    |
-| **Data Exploration and Preparation** |    ⏳ Progress    |
-| **Machine Learning 1 - Supervised Learning** |    ⏳ Progress    |
+| **Data Exploration and Preparation** |    ✅ Completed    |
+| **Machine Learning 1 - Supervised Learning** |     ✅ Completed    |
+| **Data Structure And Algorithms** |     ✅ Completed    |
+| **AWS Cloud** |     ✅ Completed    |
+| **Machine Learning 2 - UnSupervised Learning** |     ✅ Completed    |
+| **Deep Learning** |     ✅ Completed    |
+| **Big Data And PySpark** |     ⏳ Progress    |
+| **Data Visualization** |     ⏳ Progress    |
+| **NoSql - MongoDB** |     ✅ Completed    |
+| **Time Series** |     ⏳ Progress    |
 
 ---
 
